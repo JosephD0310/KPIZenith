@@ -26,7 +26,7 @@ const cx = classNames.bind(styles);
 function Education() {
     const [showPopup, setShowPopup] = useState(false);
 
-    const togglePopup = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    const togglePopup = () => {
         setShowPopup(!showPopup);
     };
 

@@ -3,12 +3,11 @@ import styles from './DetailTrack.module.sass';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import config from '../../../config';
-import { faChevronRight, faGraduationCap, faSquarePen, faThumbTack } from '@fortawesome/free-solid-svg-icons';
+import { faChevronRight, faGraduationCap, faSquarePen } from '@fortawesome/free-solid-svg-icons';
 import Button from '../../../components/Button';
 import Tabs from './Tabs';
 import { useState } from 'react';
 import Popup from '../../../components/Popup';
-import BoxList from '../../../components/BoxList';
 import TextField from '../../../components/TextField';
 
 const cx = classNames.bind(styles);

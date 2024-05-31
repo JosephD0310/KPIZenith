@@ -5,8 +5,6 @@ import config from '../../../config';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBell, faChartPie, faChevronDown, faCircleInfo, faGear, faHome, faKey, faRocket, faUser } from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react/headless';
-import { Wrapper as PopperWrapper } from '../../../components/Popper';
-import PopperItem from '../../../components/PopperItem';
 import { useState } from 'react';
 
 const cx = classNames.bind(styles);
