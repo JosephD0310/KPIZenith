@@ -114,7 +114,7 @@ function Statistic() {
                             <Status option2="true" title="Hoàn thành 50%" />
                         </div>
                         <div className={cx('header-image')}>
-                            <img src="./src/assets/illustration1.png" alt="" />
+                            <img src={import.meta.env.BASE_URL + 'images/illustration1.png'} alt="" />
                         </div>
                     </div>
                     <div className={cx('item-content')}>
@@ -128,7 +128,7 @@ function Statistic() {
                             <Status option1="true" title="Hoàn thành 50%" />
                         </div>
                         <div className={cx('header-image')}>
-                            <img src="./src/assets/illustration2.png" alt="" />
+                            <img src={import.meta.env.BASE_URL + 'images/illustration2.png'} alt="" />
                         </div>
                     </div>
                     <div className={cx('item-content')}>
@@ -142,7 +142,7 @@ function Statistic() {
                             <Status option3="true" title="Hoàn thành 50%" />
                         </div>
                         <div className={cx('header-image')}>
-                            <img src="./src/assets/illustration3.png" alt="" />
+                            <img src={import.meta.env.BASE_URL + 'images/illustration3.png'} alt="" />
                         </div>
                     </div>
                     <div className={cx('item-content')}>

@@ -41,7 +41,7 @@ function Education() {
                 <h2 className={cx('heading-text')}>Học tập</h2>
             </div>
             <div className={cx('education')}>
-                <Card rightIllus={<img src="./src/assets/illustration2.png" />}>
+                <Card rightIllus={<img src={import.meta.env.BASE_URL + 'images/illustration1.png'} />}>
                     <div>
                         <h2>HỌC TẬP</h2>
                         <p>Hãy sắp xếp thời gian học hợp lý và hiệu quả</p>
@@ -117,9 +117,8 @@ function Education() {
                             </div>
                         </div>
                         <div className={cx('target-action')}>
-                            <button >
+                            <button>
                                 <FontAwesomeIcon icon={faPenToSquare} />
-                                
                             </button>
                             <button style={{ color: '#FF7039', marginRight: '10px' }}>
                                 <FontAwesomeIcon icon={faTrash} />

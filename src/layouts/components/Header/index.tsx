@@ -48,7 +48,7 @@ function Header() {
                 <div className={cx('user')}>
                     {currentUser ? (
                         <>
-                            <img className={cx('avatar')} src="./src/assets/ava.png" alt="avatar" />
+                            <img className={cx('avatar')} src={import.meta.env.BASE_URL + 'images/ava.png'} alt="avatar" />
                             <Tippy
                                 placement="bottom-end"
                                 interactive

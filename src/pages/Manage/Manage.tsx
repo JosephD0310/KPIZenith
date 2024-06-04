@@ -13,16 +13,16 @@ function Manage() {
             <h2>Quản lý KPI</h2>
             <div className={cx('banner')}>
                 <div className={cx('banner-bg')}>
-                    <img src="./src/assets/banner2.png" alt="" />
+                    <img src={import.meta.env.BASE_URL + 'images/banner2.png'} alt="" />
                 </div>
                 <div className={cx('banner-content')}>
                     <div className={cx('illustrator')}>
-                        <img src="./src/assets/illus-banner2.png" alt="illustrator" />
+                        <img src={import.meta.env.BASE_URL + 'images/illus-banner2.png'} alt="illustrator" />
                     </div>
                     <div className={cx('title')}>
                         <h2 className={cx('heading')}>
                             <div className={cx('hl-bg')}>
-                                <img src="./src/assets/logoText.png" alt="logo" />
+                                <img src={import.meta.env.BASE_URL + 'images/logoText.png'} alt="logo" />
                             </div>
                         </h2>
                         <h2 className={cx('heading')}>Quản lý thông minh - Thành công bền vững!</h2>
@@ -38,7 +38,7 @@ function Manage() {
                 <div className={cx('education')}>
                     <Card
                         rightIllus={
-                            <img src='./src/assets/illustration1.png' />
+                            <img src={import.meta.env.BASE_URL + 'images/illustration1.png'} />
                         }
                     >
                         <div>
@@ -52,7 +52,7 @@ function Manage() {
                 <div className={cx('skill')}>
                     <Card
                         rightIllus={
-                            <img src='./src/assets/illustration2.png' />
+                            <img src={import.meta.env.BASE_URL + 'images/illustration2.png'} />
                         }
                     >
                         <div>
@@ -66,7 +66,7 @@ function Manage() {
                 <div className={cx('exercise')}>
                     <Card
                         rightIllus={
-                            <img src='./src/assets/illustration3.png' />
+                            <img src={import.meta.env.BASE_URL + 'images/illustration3.png'} />
                         }
                     >
                         <div>

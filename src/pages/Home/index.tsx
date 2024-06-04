@@ -15,7 +15,7 @@ function Home() {
             <h2>Trang chủ</h2>
             <div className={cx('banner')}>
                 <div className={cx('banner-bg')}>
-                    <img src="./src/assets/banner1.png" alt="" />
+                    <img src={import.meta.env.BASE_URL + 'images/banner1.png'} alt="" />
                 </div>
                 <div className={cx('banner-content')}>
                     <div className={cx('title')}>
@@ -29,7 +29,7 @@ function Home() {
                         <Button green='true' righticon={<FontAwesomeIcon icon={faArrowRight}/>} to={config.routes.manage} >Khám phá ngay</Button>
                     </div>
                     <div className={cx('illustrator')}>
-                        <img src="./src/assets/illus-banner1.png" alt="illustrator" />
+                        <img src={import.meta.env.BASE_URL + 'images/illus-banner1.png'} alt="illustrator" />
                     </div>
                 </div>
             </div>
@@ -43,7 +43,7 @@ function Home() {
                 <div className={cx('inner')}>
                     <div className={cx('item')}>
                         <div className={cx('item-bg')}>
-                            <img src="./src/assets/secondaryBG.png" alt="" />
+                            <img src="./assets/secondaryBG.png" alt="" />
                         </div>
                         <div className={cx('item-content')}>
                             <div className={cx('title')}>
@@ -51,13 +51,13 @@ function Home() {
                                 {/* <Status title="7 Mục tiêu" option2="true" /> */}
                             </div>
                             <div className={cx('chart')}>
-                                <img src="./src/assets/chart.png" alt="" />
+                                <img src="./assets/chart.png" alt="" />
                             </div>
                         </div>
                     </div>
                     <div className={cx('item')}>
                         <div className={cx('item-bg')}>
-                            <img src="./src/assets/secondaryBG.png" alt="" />
+                            <img src={import.meta.env.BASE_URL + 'images/secondaryBG.png'} alt="" />
                         </div>
                         <div className={cx('item-content')}>
                             <div className={cx('title')}>
@@ -65,13 +65,13 @@ function Home() {
                                 {/* <Status title="7 Mục tiêu" option2="true" /> */}
                             </div>
                             <div className={cx('chart')}>
-                                <img src="./src/assets/chart.png" alt="" />
+                                <img src="./assets/chart.png" alt="" />
                             </div>
                         </div>
                     </div>
                     <div className={cx('item')}>
                         <div className={cx('item-bg')}>
-                            <img src="./src/assets/secondaryBG.png" alt="" />
+                            <img src="./assets/secondaryBG.png" alt="" />
                         </div>
                         <div className={cx('item-content')}>
                             <div className={cx('title')}>
@@ -79,7 +79,7 @@ function Home() {
                                 {/* <Status title="7 Mục tiêu" option2="true" /> */}
                             </div>
                             <div className={cx('chart')}>
-                                <img src="./src/assets/chart.png" alt="" />
+                                <img src="./assets/chart.png" alt="" />
                             </div>
                         </div>
                     </div>

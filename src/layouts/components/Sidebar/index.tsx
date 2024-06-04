@@ -18,7 +18,7 @@ function Sidebar() {
         <div className={cx('wrapper')}>
             <div className={cx('inner')}>
                 <div className={cx('logo')}>
-                    <img src="./src/assets/logoText.png" alt="logo" />
+                    <img src={import.meta.env.BASE_URL + 'images/logoText.png'} alt="logo" />
                 </div>
                 <div className={cx('menu')}>
                     <Menu column>
