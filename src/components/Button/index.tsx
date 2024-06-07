@@ -15,12 +15,13 @@ type ButtonProps = {
     light? : string
     green? : string
     none? : string
+    outline? : string
     disabled? : string
     onClick? : () => void
 }
 
 
-function Button({ primary, secondary, light, green, none, disabled,lefticon, righticon, children, to, onClick} : ButtonProps) {
+function Button({ primary, secondary, light, green, none, outline, disabled,lefticon, righticon, children, to, onClick} : ButtonProps) {
 
     const props = {to, onClick}
     
@@ -31,6 +32,7 @@ function Button({ primary, secondary, light, green, none, disabled,lefticon, rig
         secondary: secondary,
         light: light,
         green: green,
+        outline: outline,
         none: none,
         disabled: disabled
     })

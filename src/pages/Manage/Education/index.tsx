@@ -27,7 +27,7 @@ function Education() {
     const [showPopup, setShowPopup] = useState(false);
 
     const togglePopup = () => {
-        setShowPopup(!showPopup);
+      setShowPopup(prevShowPopup => !prevShowPopup);
     };
 
     return (
@@ -50,10 +50,10 @@ function Education() {
                 </Card>
             </div>
             <div className={cx('action')}>
-                <Button primary="true" onClick={() => togglePopup} lefticon={<FontAwesomeIcon icon={faPlus} />}>
+                <Button primary="true" onClick={togglePopup} lefticon={<FontAwesomeIcon icon={faPlus} />}>
                     Mục tiêu mới
                 </Button>
-                <Popup header="Thêm mục tiêu" show={showPopup} onClose={() => togglePopup}>
+                <Popup header="Thêm mục tiêu" show={showPopup} onClose={togglePopup}>
                     <div className={cx('popup-content-item')}>
                         <h4>Tên mục tiêu</h4>
                         <TextField type="text" />
@@ -102,7 +102,7 @@ function Education() {
                         </div>
                     </div>
                 </Popup>
-                <Button primary="true" lefticon={<FontAwesomeIcon icon={faFileArrowUp} />}>
+                <Button primary="true" lefticon={<FontAwesomeIcon icon={faFileArrowUp}/>} >
                     Tải tệp tin
                 </Button>
             </div>
@@ -114,6 +114,23 @@ function Education() {
                             <div className={cx('duration')}>
                                 <FontAwesomeIcon icon={faCalendarDays} />
                                 <p>12/02/2024 - 12/05/2024</p>
+                            </div>
+                        </div>
+                        <div className={cx('target-action')}>
+                            <button>
+                                <FontAwesomeIcon icon={faPenToSquare} />
+                            </button>
+                            <button style={{ color: '#FF7039', marginRight: '10px' }}>
+                                <FontAwesomeIcon icon={faTrash} />
+                            </button>
+                        </div>
+                    </ItemList>
+                    <ItemList to={config.routes.details} lefticon={<FontAwesomeIcon icon={faGraduationCap} />}>
+                        <div className={cx('title')}>
+                            <h3>Lập trình hướng đối tượng</h3>
+                            <div className={cx('duration')}>
+                                <FontAwesomeIcon icon={faCalendarDays} />
+                                <p>01/02/2024 - 31/06/2024</p>
                             </div>
                         </div>
                         <div className={cx('target-action')}>

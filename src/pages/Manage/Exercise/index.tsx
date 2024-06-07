@@ -20,15 +20,16 @@ function Exercise() {
                 <FontAwesomeIcon icon={faChevronRight} />
                 <h2 className={cx('heading-text')}>Rèn luyện</h2>
             </div>
-            <div className={cx('education')}>
-                <Card >
-                    <div>
-                        <h2>HỌC TẬP</h2>
-                        <p>Hãy sắp xếp thời gian học hợp lý và hiệu quả</p>
-                    </div>
-                    <Status option1="true" title="7 Mục tiêu" />
-                </Card>
-            </div>
+            <div className={cx('exercise')}>
+                    <Card rightIllus={<img src={import.meta.env.BASE_URL + 'images/illustration3.png'} />}>
+                        <div>
+                            <h2>RÈN LUYỆN</h2>
+                            <p>Chăm chỉ rèn luyện mỗi ngày</p>
+                        </div>
+                        <Status option3="true" title="7 Mục tiêu" />
+                    </Card>
+                    <Link to={config.routes.exercise} className={cx('overlay-link')}></Link>
+                </div>
         </div>
     );
 }

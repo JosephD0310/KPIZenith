@@ -14,9 +14,15 @@ const cx = classNames.bind(styles);
 function Header() {
     const currentUser = true;
 
+    const [language, setLanguage] = useState('Tiếng Việt');
+
     const [visible, setVisible] = useState(false);
     const show = () => setVisible(true);
     const hide = () => setVisible(false);
+
+    const [userMenu, setUserMenu] = useState(false);
+    const showUser = () => setUserMenu(true);
+    const hideUser = () => setUserMenu(false);
 
     return (
         <header className={cx('wrapper')}>
@@ -30,14 +36,28 @@ function Header() {
                         render={(attrs) => (
                             <div className={cx('user-menu')} tabIndex={-1} {...attrs}>
                                 <PopperWrapper>
-                                    <PopperItem>Tiếng Việt</PopperItem>
-                                    <PopperItem>English</PopperItem>
+                                    <PopperItem
+                                        onClick={() => {
+                                            setLanguage('Tiếng Việt');
+                                            setVisible(false);
+                                        }}
+                                    >
+                                        Tiếng Việt
+                                    </PopperItem>
+                                    <PopperItem
+                                        onClick={() => {
+                                            setLanguage('English');
+                                            setVisible(false);
+                                        }}
+                                    >
+                                        English
+                                    </PopperItem>
                                 </PopperWrapper>
                             </div>
                         )}
                     >
                         <div className={cx('username')} onClick={visible ? hide : show}>
-                            <p>Tiếng Việt</p>
+                            <p>{language}</p>
                             <FontAwesomeIcon icon={faChevronDown} />
                         </div>
                     </Tippy>
@@ -48,14 +68,19 @@ function Header() {
                 <div className={cx('user')}>
                     {currentUser ? (
                         <>
-                            <img className={cx('avatar')} src={import.meta.env.BASE_URL + 'images/ava.png'} alt="avatar" />
+                            <img
+                                className={cx('avatar')}
+                                src={import.meta.env.BASE_URL + 'images/ava.png'}
+                                alt="avatar"
+                            />
                             <Tippy
+                                visible={userMenu}
+                                onClickOutside={hideUser}
                                 placement="bottom-end"
                                 interactive
                                 render={(attrs) => (
                                     <div className={cx('user-menu')} tabIndex={-1} {...attrs}>
                                         <PopperWrapper>
-                                            <PopperItem icon={<FontAwesomeIcon icon={faUser} />}>Profile</PopperItem>
                                             <PopperItem
                                                 to={config.routes.login}
                                                 icon={<FontAwesomeIcon icon={faRightFromBracket} />}
@@ -66,7 +91,7 @@ function Header() {
                                     </div>
                                 )}
                             >
-                                <div className={cx('username')}>
+                                <div className={cx('username')} onClick={ userMenu ? hideUser : showUser}>
                                     <p>HI_20</p>
                                     <FontAwesomeIcon icon={faChevronDown} />
                                 </div>

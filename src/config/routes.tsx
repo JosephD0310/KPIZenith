@@ -1,15 +1,13 @@
 const routes = {
-    home : '/',
+    landingPage : '/',
+    home : '/home',
     manage : '/manage',
     education : '/manage/education',
     details : '/manage/education/detail',
     skill : '/manage/skill',
     exercise : '/manage/exercise',
     statistic : '/statistic',
-    profile : '/setting/profile',
-    password : '/setting/password',
-    notification : '/setting/notification',
-    about : '/setting/about',
+    setting : '/setting',
     login : '/login',
     register : '/register'
 }

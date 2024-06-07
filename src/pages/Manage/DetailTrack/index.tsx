@@ -37,7 +37,39 @@ function DetailTrack() {
             <div className={cx('card')}>
                 <FontAwesomeIcon className={cx('card-icon')} icon={faGraduationCap} />
                 <div className={cx('card-content')}>
-                    <h3>Tiếng Nhật</h3>
+                    <div className={cx('content-header')}>
+                        <h3>Tiếng Nhật</h3>
+                        <Button primary="true" onClick={togglePopup} lefticon={<FontAwesomeIcon icon={faSquarePen} />}>
+                            Cập nhật tiến độ
+                        </Button>
+                        <Popup header="Cập nhật tiến độ - Hôm nay, 23:30" show={showPopup} onClose={togglePopup}>
+                            <div className={cx('popup-content')}>
+                                <div className={cx('popup-content-inner')}>
+                                    <h3>Tiếng Nhật</h3>
+                                    <div className={cx('popup-target')}>
+                                        <p className={cx('popup-target-name')}>Số giờ học trên lớp:</p>
+                                        <TextField small type="text" />
+                                        <p>Giờ / Tuần</p>
+                                    </div>
+                                    <div className={cx('popup-target')}>
+                                        <p className={cx('popup-target-name')}>Số giờ tự học:</p>
+                                        <TextField small type="text" />
+                                        <p>Giờ / Tuần</p>
+                                    </div>
+                                    <div className={cx('popup-target')}>
+                                        <p className={cx('popup-target-name')}>Số giờ thí nghiệm / thực hành:</p>
+                                        <TextField small type="text" />
+                                        <p>Giờ / Tuần</p>
+                                    </div>
+                                    <div className={cx('popup-target')}>
+                                        <p className={cx('popup-target-name')}>Số giờ làm bài tập:</p>
+                                        <TextField small type="text" />
+                                        <p>Giờ / Tuần</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </Popup>
+                    </div>
                     <div className={cx('content-wrapper')}>
                         <div className={cx('inner')}>
                             <b>Mô tả</b>
@@ -53,24 +85,6 @@ function DetailTrack() {
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className={cx('action')}>
-                <Button primary="true" onClick={togglePopup} lefticon={<FontAwesomeIcon icon={faSquarePen} />}>
-                    Cập nhật tiến độ
-                </Button>
-                <Popup header="Cập nhật tiến độ - Hôm nay, 23:30" show={showPopup} onClose={togglePopup}>
-                    <div className={cx('popup-content')}>
-                        <div className={cx('popup-content-inner')}>
-                            <h3>
-                                Tiếng Nhật
-                            </h3>
-                            <div className={cx('popup-target')}>
-                                <p className={cx('popup-target-name')}>Số giờ học trên lớp:</p>
-                                <TextField small type="time" />
-                            </div>
-                        </div>
-                    </div>
-                </Popup>
             </div>
             <div className={cx('detail')}>
                 <Tabs />

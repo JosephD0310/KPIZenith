@@ -20,14 +20,15 @@ function Skill() {
                 <FontAwesomeIcon icon={faChevronRight} />
                 <h2 className={cx('heading-text')}>Kỹ Năng</h2>
             </div>
-            <div className={cx('education')}>
-                <Card >
+            <div className={cx('skill')}>
+                <Card rightIllus={<img src={import.meta.env.BASE_URL + 'images/illustration2.png'} />}>
                     <div>
-                        <h2>HỌC TẬP</h2>
-                        <p>Hãy sắp xếp thời gian học hợp lý và hiệu quả</p>
+                        <h2>KỸ NĂNG</h2>
+                        <p>Thường xuyên rèn luyện kỹ năng nâng cao bản thân</p>
                     </div>
                     <Status option1="true" title="7 Mục tiêu" />
                 </Card>
+                <Link to={config.routes.skill} className={cx('overlay-link')}></Link>
             </div>
         </div>
     );

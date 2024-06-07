@@ -5,6 +5,11 @@ const cx = classNames.bind(styles);
 
 import { LineChart, RadarChart } from '../../components/Chart';
 import Status from '../../components/Status';
+import PieChart from '../../components/Chart/DoughnutChart';
+import BoxList from '../../components/BoxList';
+import ItemList from '../../components/BoxList/ItemList';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleExclamation } from '@fortawesome/free-solid-svg-icons';
 
 function Statistic() {
     const data = [
@@ -103,8 +108,25 @@ function Statistic() {
     return (
         <div className={cx('wrapper')}>
             <h2>Thống kê</h2>
-            <div className={cx('overview')}>
-                <LineChart />
+            <div className={cx('box')}>
+                <div className={cx('box-item')}>
+                    <BoxList heading="Lời khuyên">
+                        <ItemList lefticon={<FontAwesomeIcon icon={faCircleExclamation} />}>
+                            <p>Bạn chưa cập nhật mục tiêu trong tiêu chí “Rèn luyện” từ 7 ngày trước</p>
+                        </ItemList>
+                        <ItemList lefticon={<FontAwesomeIcon icon={faCircleExclamation} />}>
+                            <p>Bạn chưa cập nhật mục tiêu trong tiêu chí “Rèn luyện” từ 7 ngày trước</p>
+                        </ItemList>
+                        <ItemList lefticon={<FontAwesomeIcon icon={faCircleExclamation} />}>
+                            <p>Bạn chưa cập nhật mục tiêu trong tiêu chí “Rèn luyện” từ 7 ngày trước</p>
+                        </ItemList>
+                    </BoxList>
+                </div>
+                <div className={cx('box-item')}>
+                    <div className={cx('line-chart')}>
+                        <LineChart />   
+                    </div>
+                </div>
             </div>
             <div className={cx('card')}>
                 <div className={cx('card-item')}>
@@ -115,6 +137,9 @@ function Statistic() {
                         </div>
                         <div className={cx('header-image')}>
                             <img src={import.meta.env.BASE_URL + 'images/illustration1.png'} alt="" />
+                            <div className={cx('chart')}>
+                                <PieChart percent={90} />
+                            </div>
                         </div>
                     </div>
                     <div className={cx('item-content')}>
@@ -129,6 +154,9 @@ function Statistic() {
                         </div>
                         <div className={cx('header-image')}>
                             <img src={import.meta.env.BASE_URL + 'images/illustration2.png'} alt="" />
+                            <div className={cx('chart')}>
+                                <PieChart percent={90} />
+                            </div>
                         </div>
                     </div>
                     <div className={cx('item-content')}>
@@ -143,6 +171,9 @@ function Statistic() {
                         </div>
                         <div className={cx('header-image')}>
                             <img src={import.meta.env.BASE_URL + 'images/illustration3.png'} alt="" />
+                            <div className={cx('chart')}>
+                                <PieChart percent={90} />
+                            </div>
                         </div>
                     </div>
                     <div className={cx('item-content')}>

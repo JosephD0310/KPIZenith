@@ -6,6 +6,9 @@ import { faArrowRight, faCircleExclamation } from '@fortawesome/free-solid-svg-i
 import config from '../../config';
 import BoxList from '../../components/BoxList';
 import ItemList from '../../components/BoxList/ItemList';
+import Status from '../../components/Status';
+import DoughnutChart from '../../components/Chart/DoughnutChart';
+import { LineChart } from '../../components/Chart';
 
 const cx = classNames.bind(styles);
 
@@ -26,7 +29,13 @@ function Home() {
                             </h2>
                             <p>Định hướng mục tiêu - Nâng cao hiệu quả</p>
                         </div>
-                        <Button green='true' righticon={<FontAwesomeIcon icon={faArrowRight}/>} to={config.routes.manage} >Khám phá ngay</Button>
+                        <Button
+                            green="true"
+                            righticon={<FontAwesomeIcon icon={faArrowRight} />}
+                            to={config.routes.manage}
+                        >
+                            Khám phá ngay
+                        </Button>
                     </div>
                     <div className={cx('illustrator')}>
                         <img src={import.meta.env.BASE_URL + 'images/illus-banner1.png'} alt="illustrator" />
@@ -42,44 +51,44 @@ function Home() {
                 </div>
                 <div className={cx('inner')}>
                     <div className={cx('item')}>
-                        <div className={cx('item-bg')}>
-                            <img src="./assets/secondaryBG.png" alt="" />
-                        </div>
-                        <div className={cx('item-content')}>
+                        <div className={cx('item-content', 'education')}>
                             <div className={cx('title')}>
-                                <h2>Học tập</h2>
-                                {/* <Status title="7 Mục tiêu" option2="true" /> */}
+                                <h3>Học Tập</h3>
+                                <Status option2="true" title="Hoàn thành 50%" />
                             </div>
-                            <div className={cx('chart')}>
-                                <img src="./assets/chart.png" alt="" />
+                            <div className={cx('image')}>
+                                <img src={import.meta.env.BASE_URL + 'images/illustration1.png'} alt="" />
+                                <div className={cx('chart')}>
+                                    <DoughnutChart percent={60} />
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div className={cx('item')}>
-                        <div className={cx('item-bg')}>
-                            <img src={import.meta.env.BASE_URL + 'images/secondaryBG.png'} alt="" />
-                        </div>
-                        <div className={cx('item-content')}>
+                        <div className={cx('item-content', 'skill')}>
                             <div className={cx('title')}>
-                                <h2>Học tập</h2>
-                                {/* <Status title="7 Mục tiêu" option2="true" /> */}
+                                <h3>Học Tập</h3>
+                                <Status option1="true" title="Hoàn thành 50%" />
                             </div>
-                            <div className={cx('chart')}>
-                                <img src="./assets/chart.png" alt="" />
+                            <div className={cx('image')}>
+                                <img src={import.meta.env.BASE_URL + 'images/illustration2.png'} alt="" />
+                                <div className={cx('chart')}>
+                                    <DoughnutChart percent={60} />
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div className={cx('item')}>
-                        <div className={cx('item-bg')}>
-                            <img src="./assets/secondaryBG.png" alt="" />
-                        </div>
-                        <div className={cx('item-content')}>
+                        <div className={cx('item-content', 'exercise')}>
                             <div className={cx('title')}>
-                                <h2>Học tập</h2>
-                                {/* <Status title="7 Mục tiêu" option2="true" /> */}
+                                <h3>Học Tập</h3>
+                                <Status option3="true" title="Hoàn thành 50%" />
                             </div>
-                            <div className={cx('chart')}>
-                                <img src="./assets/chart.png" alt="" />
+                            <div className={cx('image')}>
+                                <img src={import.meta.env.BASE_URL + 'images/illustration3.png'} alt="" />
+                                <div className={cx('chart')}>
+                                    <DoughnutChart percent={90} />
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -100,17 +109,9 @@ function Home() {
                     </BoxList>
                 </div>
                 <div className={cx('box-item')}>
-                    <BoxList heading="Theo dõi tiến độ">
-                        <ItemList lefticon={<FontAwesomeIcon icon={faCircleExclamation} />}>
-                            <p>Bạn chưa cập nhật mục tiêu trong tiêu chí “Rèn luyện” từ 7 ngày trước</p>
-                        </ItemList>
-                        <ItemList lefticon={<FontAwesomeIcon icon={faCircleExclamation} />}>
-                            <p>Bạn chưa cập nhật mục tiêu trong tiêu chí “Rèn luyện” từ 7 ngày trước</p>
-                        </ItemList>
-                        <ItemList lefticon={<FontAwesomeIcon icon={faCircleExclamation} />}>
-                            <p>Bạn chưa cập nhật mục tiêu trong tiêu chí “Rèn luyện” từ 7 ngày trước</p>
-                        </ItemList>
-                    </BoxList>
+                    <div className={cx('line-chart')}>
+                        <LineChart />
+                    </div>
                 </div>
             </div>
         </div>

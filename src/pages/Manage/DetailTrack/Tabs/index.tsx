@@ -1,12 +1,13 @@
 import classNames from 'classnames/bind';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLightbulb, faSquarePen, faThumbTack } from '@fortawesome/free-solid-svg-icons';
+import { faCircle, faLightbulb, faSquarePen, faThumbTack } from '@fortawesome/free-solid-svg-icons';
 import styles from './Tabs.module.sass';
 import BoxList from '../../../../components/BoxList';
 import ItemList from '../../../../components/BoxList/ItemList';
 import Status from '../../../../components/Status';
 import { BarChart, DoughnutChart } from '../../../../components/Chart';
+import PieChart from '../../../../components/Chart/PieChart';
 
 const cx = classNames.bind(styles);
 
@@ -91,15 +92,30 @@ function Tabs() {
                         </div>
                     </div>
                     <div className={cx('inner-item', 'rate')}>
-                            <BoxList heading='Đánh giá'>
-                                <div className={cx('d-chart')}><DoughnutChart /></div>
-                                <ItemList lefticon={<FontAwesomeIcon icon={faLightbulb} />}>
-                                    <p>Mức độ hoàn thành Tiếng Nhật của bạn đã đạt 80%. Hãy xem xét các yếu tố còn lại để đạt mục tiêu 100%.</p>
-                                </ItemList>
-                                <ItemList lefticon={<FontAwesomeIcon icon={faLightbulb} />}>
-                                    <p>Số giờ tự học của bạn đang thấp, bạn nên cải thiện số giờ tự học của mình.</p>
-                                </ItemList>
-                            </BoxList>
+                        <BoxList heading="Đánh giá mức độ hoàn thành">
+                            <div className={cx('chart')}>
+                                <div className={cx('chart-content')}><PieChart /></div>
+                                <div className={cx('chart-note')}>
+                                    <div className={cx('chart-note-item')}>
+                                        <FontAwesomeIcon icon={faCircle} color='#0FD186'/>
+                                        <p>Hoàn thành</p>
+                                    </div>
+                                    <div className={cx('chart-note-item')}>
+                                        <FontAwesomeIcon icon={faCircle} color='#FFD43B' />
+                                        <p>Còn lại</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <ItemList lefticon={<FontAwesomeIcon icon={faLightbulb} />}>
+                                <p>
+                                    Mức độ hoàn thành Tiếng Nhật của bạn đã đạt 80%. Hãy xem xét các yếu tố còn lại để
+                                    đạt mục tiêu 100%.
+                                </p>
+                            </ItemList>
+                            <ItemList lefticon={<FontAwesomeIcon icon={faLightbulb} />}>
+                                <p>Số giờ tự học của bạn đang thấp, bạn nên cải thiện số giờ tự học của mình.</p>
+                            </ItemList>
+                        </BoxList>
                     </div>
                 </div>
             </div>

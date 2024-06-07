@@ -1,55 +1,42 @@
-
-import React from 'react';
 import { Doughnut } from 'react-chartjs-2';
-import {
-  Chart as ChartJS,
-  ArcElement,
-  Tooltip,
-  Legend,
-} from 'chart.js';
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 
-ChartJS.register(
-  ArcElement,
-  Tooltip,
-  Legend
-);
+ChartJS.register(ArcElement, Tooltip, Legend);
 
-const data = {
-  labels: ['Tổng số', 'Hoàn thành'],
-  datasets: [
-    {
-      label: '# of Votes',
-      data: [12, 19 ],
-      backgroundColor: [
-        'rgba(255, 99, 132, 0.2)',
-        'rgba(54, 162, 235, 0.2)',
+interface PieChartProps {
+    percent: number;
+  }
+  
+function DoughnutChart({ percent } : PieChartProps){
+    const data = {
+      labels: ['Completed', 'Remaining'],
+      datasets: [
+        {
+          data: [percent, 100 - percent],
+          backgroundColor: ['#fff', '#ffffff50'],
+          hoverBackgroundColor: ['#fff', '#ffffff50'],
+          borderColor: 'transparent',
+          borderRadius: 10,
+          cutout: '80%',
+        },
       ],
-      borderColor: [
-        'rgba(255, 99, 132, 1)',
-        'rgba(54, 162, 235, 1)',
-      ],
-      borderWidth: 1,
-    },
-  ],
-};
+    };
 
-const options = {
-  responsive: true,
-  plugins: {
-    legend: {
-      position: 'left' as const,
-      boxWidth: 100
-    },
-    title: {
-      display: true,
-      text: 'Biểu đồ thống kê tính đến thời điểm hiện tại',
-    },
-  },
-};
+    const options = {
+      responsive: true,
+      plugins: {
+        legend: {
+          display: false,
+        },
+        tooltips: {
+          enabled: false,
+        },
+      },
+    };
+    
+    return <Doughnut data={data} options={options} />;
+  };
+  
+  export default DoughnutChart;
 
-
-const DoughnutChart: React.FC = () => {
-  return <Doughnut data={data} options={options} />;
-};
-
-export default DoughnutChart;
+  
