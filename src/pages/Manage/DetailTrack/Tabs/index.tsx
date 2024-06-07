@@ -6,7 +6,7 @@ import styles from './Tabs.module.sass';
 import BoxList from '../../../../components/BoxList';
 import ItemList from '../../../../components/BoxList/ItemList';
 import Status from '../../../../components/Status';
-import { BarChart, DoughnutChart } from '../../../../components/Chart';
+import { BarChart } from '../../../../components/Chart';
 import PieChart from '../../../../components/Chart/PieChart';
 
 const cx = classNames.bind(styles);

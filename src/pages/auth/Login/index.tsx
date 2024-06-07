@@ -1,7 +1,6 @@
 import classNames from 'classnames/bind';
 import styles from './Login.module.sass';
 import TextField from '../../../components/TextField';
-import { Link } from 'react-router-dom';
 import config from '../../../config';
 import Button from '../../../components/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

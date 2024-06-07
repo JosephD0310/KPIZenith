@@ -4,25 +4,15 @@ import Menu, { MenuItem } from '../Menu';
 import config from '../../../config';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-    faBell,
     faChartPie,
-    faChevronDown,
-    faCircleInfo,
     faGear,
     faHome,
-    faKey,
     faRocket,
-    faUser,
 } from '@fortawesome/free-solid-svg-icons';
-import Tippy from '@tippyjs/react/headless';
-import { useState } from 'react';
 
 const cx = classNames.bind(styles);
 
 function Sidebar() {
-    const [visible, setVisible] = useState(false);
-    const show = () => setVisible(true);
-    const hide = () => setVisible(false);
 
     return (
         <div className={cx('wrapper')}>

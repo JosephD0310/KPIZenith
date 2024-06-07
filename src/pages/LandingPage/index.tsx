@@ -1,6 +1,5 @@
 import classNames from "classnames/bind";
 import styles from './LandingPage.module.sass'
-import Button from "../../components/Button";
 import { Link } from "react-router-dom";
 import config from "../../config";
 
