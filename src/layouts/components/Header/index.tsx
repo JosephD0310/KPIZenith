@@ -9,8 +9,6 @@ import PopperItem from '../../../components/PopperItem';
 import config from '../../../config';
 import { useState } from 'react';
 import ItemList from '../../../components/BoxList/ItemList';
-import Popup from '../../../components/Popup';
-import Slider from '../../../components/Slider';
 
 const cx = classNames.bind(styles);
 

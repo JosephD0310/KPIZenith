@@ -12,7 +12,7 @@ type TextFieldProps = {
 }
 
 
-function TextField({ type, placeholder, small, require } : TextFieldProps) {
+function TextField({ type, placeholder, small } : TextFieldProps) {
     
     const classes = cx('wrapper', {
         small : small,

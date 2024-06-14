@@ -5,7 +5,6 @@ const cx = classNames.bind(styles);
 
 import { LineChart, RadarChart } from '../../components/Chart';
 import Status from '../../components/Status';
-import PieChart from '../../components/Chart/DoughnutChart';
 import BoxList from '../../components/BoxList';
 import ItemList from '../../components/BoxList/ItemList';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
