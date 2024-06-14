@@ -39,7 +39,7 @@ function Skill() {
                         <h2>KỸ NĂNG</h2>
                         <p>Thường xuyên rèn luyện kỹ năng nâng cao bản thân</p>
                     </div>
-                    <Status option1="true" title="7 Mục tiêu" />
+                    <Status option1="true" title="3 Mục tiêu" />
                 </Card>
                 <Link to={config.routes.skill} className={cx('overlay-link')}></Link>
             </div>

@@ -39,7 +39,7 @@ function Exercise() {
                         <h2>RÈN LUYỆN</h2>
                         <p>Chăm chỉ rèn luyện mỗi ngày</p>
                     </div>
-                    <Status option3="true" title="7 Mục tiêu" />
+                    <Status option3="true" title="5 Mục tiêu" />
                 </Card>
                 <Link to={config.routes.exercise} className={cx('overlay-link')}></Link>
             </div>

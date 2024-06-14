@@ -46,7 +46,7 @@ function Education() {
                         <h2>HỌC TẬP</h2>
                         <p>Hãy sắp xếp thời gian học hợp lý và hiệu quả</p>
                     </div>
-                    <Status option2="true" title="7 Mục tiêu" />
+                    <Status option2="true" title="6 Mục tiêu" />
                 </Card>
             </div>
             <div className={cx('action')}>
