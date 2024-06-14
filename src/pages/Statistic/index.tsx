@@ -112,13 +112,13 @@ function Statistic() {
                 <div className={cx('box-item')}>
                     <BoxList heading="Lời khuyên">
                         <ItemList lefticon={<FontAwesomeIcon icon={faCircleExclamation} />}>
-                            <p>Bạn chưa cập nhật mục tiêu trong tiêu chí “Rèn luyện” từ 7 ngày trước</p>
+                            <p>Mức độ hoàn thành phần Học tập của bạn rất tốt, hãy cố gắng nhé</p>
                         </ItemList>
                         <ItemList lefticon={<FontAwesomeIcon icon={faCircleExclamation} />}>
-                            <p>Bạn chưa cập nhật mục tiêu trong tiêu chí “Rèn luyện” từ 7 ngày trước</p>
+                            <p>Mức độ hoàn thành phần Kỹ năng của bạn rất tốt, hãy cố gắng nhé</p>
                         </ItemList>
                         <ItemList lefticon={<FontAwesomeIcon icon={faCircleExclamation} />}>
-                            <p>Bạn chưa cập nhật mục tiêu trong tiêu chí “Rèn luyện” từ 7 ngày trước</p>
+                            <p>Mức độ hoàn thành phần Rèn luyện của bạn rất tốt, hãy cố gắng nhé</p>
                         </ItemList>
                     </BoxList>
                 </div>

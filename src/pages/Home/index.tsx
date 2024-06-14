@@ -98,10 +98,10 @@ function Home() {
                 <div className={cx('box-item')}>
                     <BoxList heading="Nhắc nhở">
                         <ItemList lefticon={<FontAwesomeIcon icon={faCircleExclamation} />}>
-                            <p>Bạn chưa cập nhật mục tiêu trong tiêu chí “Rèn luyện” từ 7 ngày trước</p>
+                            <p>Bạn chưa cập nhật mục tiêu trong tiêu chí “Học tập” từ 7 ngày trước</p>
                         </ItemList>
                         <ItemList lefticon={<FontAwesomeIcon icon={faCircleExclamation} />}>
-                            <p>Bạn chưa cập nhật mục tiêu trong tiêu chí “Rèn luyện” từ 7 ngày trước</p>
+                            <p>Bạn chưa cập nhật mục tiêu trong tiêu chí “Kỹ năng” từ 7 ngày trước</p>
                         </ItemList>
                         <ItemList lefticon={<FontAwesomeIcon icon={faCircleExclamation} />}>
                             <p>Bạn chưa cập nhật mục tiêu trong tiêu chí “Rèn luyện” từ 7 ngày trước</p>
