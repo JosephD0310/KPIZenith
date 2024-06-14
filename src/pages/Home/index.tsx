@@ -54,12 +54,12 @@ function Home() {
                         <div className={cx('item-content', 'education')}>
                             <div className={cx('title')}>
                                 <h3>Học Tập</h3>
-                                <Status option2="true" title="Hoàn thành 50%" />
+                                <Status option2="true" title="Hoàn thành 75%" />
                             </div>
                             <div className={cx('image')}>
                                 <img src={import.meta.env.BASE_URL + 'images/illustration1.png'} alt="" />
                                 <div className={cx('chart')}>
-                                    <DoughnutChart percent={60} />
+                                    <DoughnutChart percent={75} color='255, 255, 255'/>
                                 </div>
                             </div>
                         </div>
@@ -67,13 +67,13 @@ function Home() {
                     <div className={cx('item')}>
                         <div className={cx('item-content', 'skill')}>
                             <div className={cx('title')}>
-                                <h3>Học Tập</h3>
-                                <Status option1="true" title="Hoàn thành 50%" />
+                                <h3>Kỹ Năng</h3>
+                                <Status option1="true" title="Hoàn thành 76%" />
                             </div>
                             <div className={cx('image')}>
                                 <img src={import.meta.env.BASE_URL + 'images/illustration2.png'} alt="" />
                                 <div className={cx('chart')}>
-                                    <DoughnutChart percent={60} />
+                                    <DoughnutChart percent={76} color='255, 255, 255'/>
                                 </div>
                             </div>
                         </div>
@@ -81,13 +81,13 @@ function Home() {
                     <div className={cx('item')}>
                         <div className={cx('item-content', 'exercise')}>
                             <div className={cx('title')}>
-                                <h3>Học Tập</h3>
-                                <Status option3="true" title="Hoàn thành 50%" />
+                                <h3>Rèn Luyện</h3>
+                                <Status option3="true" title="Hoàn thành 88%" />
                             </div>
                             <div className={cx('image')}>
                                 <img src={import.meta.env.BASE_URL + 'images/illustration3.png'} alt="" />
                                 <div className={cx('chart')}>
-                                    <DoughnutChart percent={90} />
+                                    <DoughnutChart percent={88} color='255, 255, 255'/>
                                 </div>
                             </div>
                         </div>

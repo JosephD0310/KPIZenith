@@ -7,18 +7,19 @@ type TextFieldProps = {
     type: string
     placeholder?: string
     small? : boolean
+    require? : boolean
 
 }
 
 
-function TextField({ type, placeholder, small } : TextFieldProps) {
+function TextField({ type, placeholder, small, require } : TextFieldProps) {
     
     const classes = cx('wrapper', {
         small : small,
     })
 
     return ( 
-        <input className={classes} type={type} placeholder={placeholder} />
+        <input className={classes} type={type} placeholder={placeholder} required/>
      );
 }
 

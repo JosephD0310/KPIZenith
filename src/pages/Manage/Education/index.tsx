@@ -127,7 +127,75 @@ function Education() {
                     </ItemList>
                     <ItemList to={config.routes.details} lefticon={<FontAwesomeIcon icon={faGraduationCap} />}>
                         <div className={cx('title')}>
-                            <h3>Lập trình hướng đối tượng</h3>
+                            <h3>OOP</h3>
+                            <div className={cx('duration')}>
+                                <FontAwesomeIcon icon={faCalendarDays} />
+                                <p>01/02/2024 - 31/06/2024</p>
+                            </div>
+                        </div>
+                        <div className={cx('target-action')}>
+                            <button>
+                                <FontAwesomeIcon icon={faPenToSquare} />
+                            </button>
+                            <button style={{ color: '#FF7039', marginRight: '10px' }}>
+                                <FontAwesomeIcon icon={faTrash} />
+                            </button>
+                        </div>
+                    </ItemList>
+                    <ItemList to={config.routes.details} lefticon={<FontAwesomeIcon icon={faGraduationCap} />}>
+                        <div className={cx('title')}>
+                            <h3>UIUX</h3>
+                            <div className={cx('duration')}>
+                                <FontAwesomeIcon icon={faCalendarDays} />
+                                <p>01/02/2024 - 31/06/2024</p>
+                            </div>
+                        </div>
+                        <div className={cx('target-action')}>
+                            <button>
+                                <FontAwesomeIcon icon={faPenToSquare} />
+                            </button>
+                            <button style={{ color: '#FF7039', marginRight: '10px' }}>
+                                <FontAwesomeIcon icon={faTrash} />
+                            </button>
+                        </div>
+                    </ItemList>
+                    <ItemList to={config.routes.details} lefticon={<FontAwesomeIcon icon={faGraduationCap} />}>
+                        <div className={cx('title')}>
+                            <h3>ITSS</h3>
+                            <div className={cx('duration')}>
+                                <FontAwesomeIcon icon={faCalendarDays} />
+                                <p>01/02/2024 - 31/06/2024</p>
+                            </div>
+                        </div>
+                        <div className={cx('target-action')}>
+                            <button>
+                                <FontAwesomeIcon icon={faPenToSquare} />
+                            </button>
+                            <button style={{ color: '#FF7039', marginRight: '10px' }}>
+                                <FontAwesomeIcon icon={faTrash} />
+                            </button>
+                        </div>
+                    </ItemList>
+                    <ItemList to={config.routes.details} lefticon={<FontAwesomeIcon icon={faGraduationCap} />}>
+                        <div className={cx('title')}>
+                            <h3>Nhập môn AI</h3>
+                            <div className={cx('duration')}>
+                                <FontAwesomeIcon icon={faCalendarDays} />
+                                <p>01/02/2024 - 31/06/2024</p>
+                            </div>
+                        </div>
+                        <div className={cx('target-action')}>
+                            <button>
+                                <FontAwesomeIcon icon={faPenToSquare} />
+                            </button>
+                            <button style={{ color: '#FF7039', marginRight: '10px' }}>
+                                <FontAwesomeIcon icon={faTrash} />
+                            </button>
+                        </div>
+                    </ItemList>
+                    <ItemList to={config.routes.details} lefticon={<FontAwesomeIcon icon={faGraduationCap} />}>
+                        <div className={cx('title')}>
+                            <h3>Lịch sử Đảng</h3>
                             <div className={cx('duration')}>
                                 <FontAwesomeIcon icon={faCalendarDays} />
                                 <p>01/02/2024 - 31/06/2024</p>

@@ -98,7 +98,7 @@ function Setting() {
                                 <p>Thiết lập mục tiêu đầu tiên</p>
                             </div>
                             <div className={cx('achieve-chart')}>
-                                <DoughnutChart percent={100} />
+                                <DoughnutChart percent={100} color='15, 209, 134'/>
                                 <h4 className={cx('data-chart')}>1 / 1</h4>
                             </div>
                         </div>
@@ -110,7 +110,7 @@ function Setting() {
                                 <p>Thiết lập 20 mục tiêu</p>
                             </div>
                             <div className={cx('achieve-chart')}>
-                                <DoughnutChart percent={25} />
+                                <DoughnutChart percent={25} color='15, 209, 134'/>
                                 <h4 className={cx('data-chart')}>5 / 20</h4>
                             </div>
                         </div>
@@ -122,7 +122,7 @@ function Setting() {
                                 <p>Cập nhật tiến độ liên tục trong 7 ngày</p>
                             </div>
                             <div className={cx('achieve-chart')}>
-                                <DoughnutChart percent={28.5} />
+                                <DoughnutChart percent={28.5} color='15, 209, 134'/>
                                 <h4 className={cx('data-chart')}>2 / 7</h4>
                             </div>
                         </div>
@@ -134,7 +134,7 @@ function Setting() {
                                 <p>Thiết lập mục tiêu đầu tiên</p>
                             </div>
                             <div className={cx('achieve-chart')}>
-                                <DoughnutChart percent={100} />
+                                <DoughnutChart percent={100} color='15, 209, 134'/>
                                 <h4 className={cx('data-chart')}>1 / 1</h4>
                             </div>
                         </div>
@@ -146,7 +146,7 @@ function Setting() {
                                 <p>Nạp lần đầu</p>
                             </div>
                             <div className={cx('achieve-chart')}>
-                                <DoughnutChart percent={0} />
+                                <DoughnutChart percent={0} color='15, 209, 134'/>
                                 <h4 className={cx('data-chart')}>0 / 1</h4>
                             </div>
                         </div>

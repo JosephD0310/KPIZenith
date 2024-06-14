@@ -10,6 +10,7 @@ type ButtonProps = {
     lefticon? : ReactNode
     righticon? : ReactNode
     to? : string
+    type? : "button" | "submit" | "reset" 
     primary? : string
     secondary? : string
     light? : string
@@ -21,9 +22,9 @@ type ButtonProps = {
 }
 
 
-function Button({ primary, secondary, light, green, none, outline, disabled,lefticon, righticon, children, to, onClick} : ButtonProps) {
+function Button({ primary, secondary, light, green, none, outline, disabled,lefticon, righticon, children, to, type, onClick} : ButtonProps) {
 
-    const props = {to, onClick}
+    const props = {type, to, onClick}
     
     let Comp: React.ElementType = 'button';
     

@@ -10,6 +10,7 @@ import BoxList from '../../components/BoxList';
 import ItemList from '../../components/BoxList/ItemList';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleExclamation } from '@fortawesome/free-solid-svg-icons';
+import DoughnutChart from '../../components/Chart/DoughnutChart';
 
 function Statistic() {
     const data = [
@@ -133,12 +134,12 @@ function Statistic() {
                     <div className={cx('item-header', 'education')}>
                         <div className={cx('header-title')}>
                             <h3>Học Tập</h3>
-                            <Status option2="true" title="Hoàn thành 50%" />
+                            <Status option2="true" title="Hoàn thành 75%" />
                         </div>
                         <div className={cx('header-image')}>
                             <img src={import.meta.env.BASE_URL + 'images/illustration1.png'} alt="" />
                             <div className={cx('chart')}>
-                                <PieChart percent={90} />
+                            <DoughnutChart percent={75} color={'255, 255, 255'} />
                             </div>
                         </div>
                     </div>
@@ -150,12 +151,12 @@ function Statistic() {
                     <div className={cx('item-header', 'skill')}>
                         <div className={cx('header-title')}>
                             <h3>Kỹ Năng</h3>
-                            <Status option1="true" title="Hoàn thành 50%" />
+                            <Status option1="true" title="Hoàn thành 76%" />
                         </div>
                         <div className={cx('header-image')}>
                             <img src={import.meta.env.BASE_URL + 'images/illustration2.png'} alt="" />
                             <div className={cx('chart')}>
-                                <PieChart percent={90} />
+                            <DoughnutChart percent={76} color={'255, 255, 255'} />
                             </div>
                         </div>
                     </div>
@@ -167,12 +168,12 @@ function Statistic() {
                     <div className={cx('item-header', 'exercise')}>
                         <div className={cx('header-title')}>
                             <h3>Rèn Luyện</h3>
-                            <Status option3="true" title="Hoàn thành 50%" />
+                            <Status option3="true" title="Hoàn thành 88%" />
                         </div>
                         <div className={cx('header-image')}>
                             <img src={import.meta.env.BASE_URL + 'images/illustration3.png'} alt="" />
                             <div className={cx('chart')}>
-                                <PieChart percent={90} />
+                                <DoughnutChart percent={88} color={'255, 255, 255'} />
                             </div>
                         </div>
                     </div>

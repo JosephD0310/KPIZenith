@@ -6,10 +6,16 @@ const cx = classNames.bind(styles)
 
 type Props = {
     children : ReactNode;
+    color? : string;
 }
 
-function Wrapper({ children } : Props) {
-    return <div className={cx('wrapper')}>{children}</div>
+function Wrapper({ children, color } : Props) {
+
+    const classes = cx('wrapper', {
+        bgColor : color
+    })
+
+    return <div className={classes}>{children}</div>
 }
 
 export default Wrapper;

@@ -5,22 +5,30 @@
 
     .background
         width: 100%
-        
-    .button
+
+    .button-wrapper
         position: absolute
         bottom: 13%
-        left: 15%
-        background: #F3FFFB
-        font-size: 24px
-        font-weight: 700
-        padding: 15px 40px
-        color: var(--text-color)
-        border-radius: 10px
+        left: 10%
+        display: flex
+        gap: 10px
 
-        // &:hover
-        // background-color: darken(#8AC53E, 10%)
+    .button
+        background: #fff
+        font-size: 18px
+        font-weight: 700
+        padding: 10px 30px
+        color: var(--text-color)
+        border-radius: 50px
+
+        &:hover
+            background-color: darken(#8AC53E, 10%)
+            color: #fff
 
         &:active
             background-color: #0FD186
             color: #fff
-            
+
+    .btn-register
+        background: none
+        color: #fff

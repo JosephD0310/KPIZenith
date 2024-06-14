@@ -5,16 +5,19 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 interface PieChartProps {
     percent: number;
+    color: string
   }
   
-function DoughnutChart({ percent } : PieChartProps){
+function DoughnutChart({ percent, color } : PieChartProps){
     const data = {
       labels: ['Completed', 'Remaining'],
       datasets: [
         {
           data: [percent, 100 - percent],
-          backgroundColor: ['#fff', '#ffffff50'],
-          hoverBackgroundColor: ['#fff', '#ffffff50'],
+          backgroundColor: [
+            `rgba(${color})`,
+            `rgba(${color}, 30%)`,
+          ],
           borderColor: 'transparent',
           borderRadius: 10,
           cutout: '80%',
@@ -38,5 +41,4 @@ function DoughnutChart({ percent } : PieChartProps){
   };
   
   export default DoughnutChart;
-
   

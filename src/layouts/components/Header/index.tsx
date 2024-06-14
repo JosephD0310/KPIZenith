@@ -1,6 +1,6 @@
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBell, faChevronDown, faRightFromBracket} from '@fortawesome/free-solid-svg-icons';
+import { faBell, faChevronDown, faCircleExclamation, faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react/headless';
 import styles from './Header.module.sass';
 import Button from '../../../components/Button';
@@ -8,10 +8,14 @@ import { Wrapper as PopperWrapper } from '../../../components/Popper';
 import PopperItem from '../../../components/PopperItem';
 import config from '../../../config';
 import { useState } from 'react';
+import ItemList from '../../../components/BoxList/ItemList';
+import Popup from '../../../components/Popup';
+import Slider from '../../../components/Slider';
 
 const cx = classNames.bind(styles);
 
 function Header() {
+
     const currentUser = true;
 
     const [language, setLanguage] = useState('Tiếng Việt');
@@ -23,6 +27,10 @@ function Header() {
     const [userMenu, setUserMenu] = useState(false);
     const showUser = () => setUserMenu(true);
     const hideUser = () => setUserMenu(false);
+
+    const [notifiPopper, setNotifiPopper] = useState(false);
+    const showNotifi = () => setNotifiPopper(true);
+    const hideNotifi = () => setNotifiPopper(false);
 
     return (
         <header className={cx('wrapper')}>
@@ -63,7 +71,33 @@ function Header() {
                     </Tippy>
                 </div>
                 <span className={cx('notifi')}>
-                    <FontAwesomeIcon icon={faBell} />
+                    <Tippy
+                        visible={notifiPopper}
+                        onClickOutside={hideNotifi}
+                        placement="bottom-end"
+                        interactive
+                        render={(attrs) => (
+                            <div className={cx('notifi-menu')} tabIndex={-1} {...attrs}>
+                                <PopperWrapper color="#CFF6E7">
+                                    <div className={cx('notifi-list')}>
+                                        <ItemList lefticon={<FontAwesomeIcon icon={faCircleExclamation} />}>
+                                            <p>Bạn chưa cập nhật mục tiêu trong tiêu chí “Rèn luyện” từ 7 ngày trước</p>
+                                        </ItemList>
+                                        <ItemList lefticon={<FontAwesomeIcon icon={faCircleExclamation} />}>
+                                            <p>Bạn chưa cập nhật mục tiêu trong tiêu chí “Rèn luyện” từ 7 ngày trước</p>
+                                        </ItemList>
+                                        <ItemList lefticon={<FontAwesomeIcon icon={faCircleExclamation} />}>
+                                            <p>Bạn chưa cập nhật mục tiêu trong tiêu chí “Rèn luyện” từ 7 ngày trước</p>
+                                        </ItemList>
+                                    </div>
+                                </PopperWrapper>
+                            </div>
+                        )}
+                    >
+                        <div onClick={notifiPopper ? hideNotifi : showNotifi}>
+                            <FontAwesomeIcon icon={faBell} />
+                        </div>
+                    </Tippy>
                 </span>
                 <div className={cx('user')}>
                     {currentUser ? (
@@ -85,13 +119,13 @@ function Header() {
                                                 to={config.routes.login}
                                                 icon={<FontAwesomeIcon icon={faRightFromBracket} />}
                                             >
-                                                Log out
+                                                Đăng xuất
                                             </PopperItem>
                                         </PopperWrapper>
                                     </div>
                                 )}
                             >
-                                <div className={cx('username')} onClick={ userMenu ? hideUser : showUser}>
+                                <div className={cx('username')} onClick={userMenu ? hideUser : showUser}>
                                     <p>HI_20</p>
                                     <FontAwesomeIcon icon={faChevronDown} />
                                 </div>

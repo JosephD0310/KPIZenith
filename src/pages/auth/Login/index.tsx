@@ -23,7 +23,7 @@ function Login() {
                             <TextField type="password" />
                         </div>
                         <Button none='true' to={config.routes.login}>Quên mật khẩu</Button>
-                        <Button to={config.routes.home} primary="true">Đăng nhập</Button>
+                        <Button to={config.routes.home} primary="true" type='submit'>Đăng nhập</Button>
                         <h4>Hoặc</h4>
                         <div className={cx('login-option')}>
                             <Button outline="true">
